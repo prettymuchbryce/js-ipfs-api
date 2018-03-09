@@ -129,7 +129,7 @@ function requestAPI (config, options, callback) {
   const headers = {}
 
   if (config.authorization) {
-    config.headers['Authorization'] = config.authorization
+    headers['Authorization'] = config.authorization
   }
 
   if (isNode) {
