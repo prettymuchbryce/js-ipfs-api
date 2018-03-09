@@ -128,8 +128,8 @@ function requestAPI (config, options, callback) {
   const method = 'POST'
   const headers = {}
 
-  if (config.authentication) {
-    config.headers['Authentication'] = config.authentication
+  if (config.authorization) {
+    config.headers['Authorization'] = config.authorization
   }
 
   if (isNode) {
