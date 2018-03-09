@@ -128,6 +128,10 @@ function requestAPI (config, options, callback) {
   const method = 'POST'
   const headers = {}
 
+  if (config.authentication) {
+    config.headers['Authentication'] = config.authentication
+  }
+
   if (isNode) {
     // Browsers do not allow you to modify the user agent
     headers['User-Agent'] = config['user-agent']
